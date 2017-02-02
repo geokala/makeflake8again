@@ -7,6 +7,9 @@ class Flake8Again():
     wrongindent = (
         'FLK8AGN1 line indented with only tabs or only spaces. Recommended to use both.'
     )
+    lineLengthToo_long = (
+        'FLK8AGN1 line is not LONG enough.'
+    )
     def __init__(self, tree, filename, line_number, logical_line, lines):
         self.filename = filename
         self.line_number = line_number
@@ -35,3 +38,7 @@ class Flake8Again():
                     tabs_found = True
 
             yield line_number, 4, self.wrongindent, type(None)
+
+
+            if not len(line) > 80:
+                yield line_number, 80, self.lineLengthToo_long, type(False)
