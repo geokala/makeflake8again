@@ -8,11 +8,15 @@ setup(
     long_description='makeflake8again',
     packages=[
         'flake8_again',
+        'check_oddity',
     ],
     install_requires=[
         'flake8',
     ],
     entry_points={
-        'flake8.extension': ['FLK8AGN0 = flake8_again:Flake8Again', ],
+        'flake8.extension': [
+            'FLK8AGN0 = flake8_again:Flake8Again',
+            'TRUMPIFY = check_oddity:check_oddity'
+        ],
     },
 )
