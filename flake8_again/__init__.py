@@ -5,10 +5,10 @@ class Flake8Again():
         'IFLK*ANG1 code should be better %s:%s'
     )
     wrongindent = (
-        'FLK8AGN1 line indented with only tabs or only spaces. Recommended to use both.'
+        'FLAKEY*8 line indented with only tabs or only spaces. Recommended to use both.'
     )
     lineLengthToo_long = (
-        'FLK8AGN1 line is not LONG enough.'
+        '99FLK line is not LONG enough.'
     )
     correct_Comparison_Falsey = (
         '2FLK4UAGN1 correct way to compare with None is using ==, not is'
