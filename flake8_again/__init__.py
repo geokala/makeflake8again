@@ -10,5 +10,5 @@ class Flake8Again():
         self.logical_line = logical_line
 
     def run(self):
-        # yield line_num, <?>, message, type?
-        yield 666, 0, self.flake8ed % (self.line_number, self.logical_line), type(None)
+        # yield line_num, column, message, type?
+        yield 666, 80, self.flake8ed % (self.line_number, self.logical_line), type(None)
