@@ -10,6 +10,9 @@ class Flake8Again():
     lineLengthToo_long = (
         'FLK8AGN1 line is not LONG enough.'
     )
+    correct_Comparison_Falsey = (
+        '2FLK4UAGN1 correct way to compare with None is using ==, not is'
+    )
     def __init__(self, tree, filename, line_number, logical_line, lines):
         self.filename = filename
         self.line_number = line_number
@@ -42,3 +45,5 @@ class Flake8Again():
 
             if not len(line) > 80:
                 yield line_number, 80, self.lineLengthToo_long, type(False)
+            if ' is None' in line:
+                yield line_number, 42, self.correct_Comparison_Falsey, type(self.correct_Comparison_Falsey)
