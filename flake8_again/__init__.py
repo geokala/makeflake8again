@@ -17,4 +17,4 @@ class Flake8Again():
 
         for line in range(0, len(self.lines)):
             # yield line_num, column, message, type?
-            yield 666, 80, self.flake8ed % (line, self.lines[line]), type(None)
+            yield 666, 80, self.flake8ed % (line, self.lines[line].rstrip()), type(None)
