@@ -13,7 +13,7 @@ class Flake8Again():
     def run(self):
         if self.filename == 'flake8_again/__init__.py':
             # What could possibly be wrong?
-            return []
+            return
 
         for line in range(0, len(self.lines)):
             # yield line_num, column, message, type?
